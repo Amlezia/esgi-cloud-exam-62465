@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: myweb
+    region: frankfurt  
+    plan: free
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASEURL
+        fromDatabase:
+          name: mydb
+          property: connectionString
+
+databases:
+  - name: exo-cloud-db
+    databaseName: mydbname
+    region: frankfurt
+    plan: free
