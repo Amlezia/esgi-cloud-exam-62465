@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: exo-cloud-exam-62465
+    name: esgi-cloud-exam-62465
     region: frankfurt  
     plan: free
     runtime: node
